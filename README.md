@@ -4,6 +4,9 @@
 
 This package acts as a wrapper for [BareSIP](https://github.com/baresip/baresip), which is required for this package to function. For installation instructions, see the [BareSIP Repository](https://github.com/baresip/baresip). Typically, it can be installed using your favorite linux/macos package manager.
 
+## Installation
+`pip3 install python-sip-client`
+
 ## Example Usage
     from python_sip_client import BareSIP
     import time
