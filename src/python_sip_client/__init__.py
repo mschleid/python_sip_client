@@ -178,7 +178,7 @@ class BareSIP:
                 # Release semaphore
                 self._semaphore_user_agents = 0
 
-                self._logger.debug(f"Found {len(self._user_agents)} User Agents: {[f"{agent.uri}, registered={agent.registered}" for agent in self._user_agents]}")
+                self._logger.debug(f"Found {len(self._user_agents)} User Agents")
 
                 return
 
