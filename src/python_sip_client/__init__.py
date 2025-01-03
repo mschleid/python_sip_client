@@ -140,6 +140,8 @@ class BareSIP:
                 "session closed",
             ]
 
+            # print(self._process.readline().strip())
+
             expectation = expectations[self._process.expect(expectations, timeout=0)]
         
             if expectation == "baresip is ready.":
@@ -164,9 +166,10 @@ class BareSIP:
 
                 # For each discovered user agent
                 for i in range(agents_count):
-                    self._process.expect([str(i)])
+                    self._process.expect([str(i), ">"])
                     # Process each line
                     line = (self._process.readline().strip())[2:]
+                    print(f"line: {line}")
                     uri = line[:line.index(" ")]
                     user = uri[uri.index(":") + 1:uri.index("@")]
                     domain = uri[uri.index("@") + 1:]
