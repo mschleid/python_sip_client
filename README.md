@@ -53,3 +53,6 @@ This package acts as a wrapper for [BareSIP](https://github.com/baresip/baresip)
         finally:
             # Stop BareSIP
             bs.stop()
+
+## Notes
+- Currently, this package only supports Unix-like systems due to a limitation within a package dependency.  Running on a Windows environment may lead to unexpected behavior or not work at all.
